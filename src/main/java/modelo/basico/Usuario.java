@@ -1,13 +1,16 @@
 package modelo.basico;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Usuario {
 
-	// @Id faz a referencia a PK
+	// @Id faz a referencia a PK, e @GeneratedValue significa que esse valor é auto_increment
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String nome;
