@@ -10,11 +10,15 @@ import javax.persistence.Id;
 @Entity
 public class Usuario {
 
-	// @Id faz a referencia a PK, e @GeneratedValue significa que esse valor é auto_increment
+	// @Id faz a referencia a PK
+	// @GeneratedValue significa que esse valor é auto_increment
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	// por padrão vai ser criada uma coluna do tipo varchar de 255 que aceita nulos,
+	// mas vc pode especificar usando o @Column(name = "...", nullable = false)
+	// nulable é não nulo*
 	private String nome;
 
 	// @Transient faz com que o atributo não seja mapeado para o banco de dados
