@@ -5,13 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-// mudança
-
 @Entity
 public class Usuario {
 
 	// @Id faz a referencia a PK
 	// @GeneratedValue significa que esse valor é auto_increment
+	// em alguns outros bancos usamos o sequence, como PostgreSQL e Oracle
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
