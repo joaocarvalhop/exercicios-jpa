@@ -4,9 +4,10 @@ import modelo.basico.Produto;
 
 public class ProdutoDAO extends DAO<Produto> {
 
-	// mï¿½todos que sï¿½ produtoDAO terï¿½, como aplicar desconto para itens tipo X
+	// métodos que só produtoDAO terá, como aplicar desconto para itens tipo X
 	
 	// construtor fazendo ref a classe pai 
+	public ProdutoDAO() {
 		super(Produto.class);
 	}
 }
