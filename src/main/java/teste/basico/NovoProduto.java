@@ -7,7 +7,7 @@ public class NovoProduto {
 
 	public static void main(String[] args) {
 
-		Produto p1 = new Produto("Notebook", 2988.89);
+		Produto p1 = new Produto("Tablet", 568.89);
 		DAO<Produto> dao = new DAO<>(Produto.class);
 		// abrir transaçao incluir produto e fechar transação
 		// dao.abrirT().incluir(p1).fechar();
