@@ -1,5 +1,6 @@
 package modelo.umpraum;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +21,13 @@ public class Cliente {
 
 	// joincolumn é usado para mapear campos que representam junção de tabelas
 	// o unique garante que nenhum outro cliente use o assento de outro cliente
-	@OneToOne
+	// cascade -> realiza uma operação e cascata para a inserção/persist como a
+	// alteração/merge
+	// @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}) pode usar dois
+	// tipos de operação
+
+	// @OneToOne(cascade = CascadeType.ALL) para todos
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "assento_id", unique = true)
 	private Assento assento;
 
