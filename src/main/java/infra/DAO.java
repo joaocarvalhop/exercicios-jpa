@@ -64,11 +64,15 @@ public class DAO<E> {
 
 		return query.getResultList();
 	}
-	
+
 	public List<E> obterTodos() {
 		return this.obterTodos(10, 0);
 	}
-	
+
+	public E obterPorId(Object id) {
+		return em.find(classe, id);
+	}
+
 	public void fechar() {
 		em.close();
 	}
