@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +23,8 @@ public class Pedido {
 
 	// mappedBy = qual é o atributo dentro da classe ItemPedido que mapea o
 	// relacionamento, e é sempre colocado no lado bidirecional da relação
-	@OneToMany(mappedBy = "pedido")
+	// Lazy é o valor deafult de fetch (...ToMany -> LAZY)
+	@OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
 	private List<ItemPedido> itens;
 
 	public Pedido() {
