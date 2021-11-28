@@ -22,6 +22,7 @@ public class NovoFilmeAtor {
 		DAO<Filme> dao = new DAO<>();
 		
 		dao.incluirAtomico(filmeA);
+		dao.incluirAtomico(filmeB);
 	}
 
 }
