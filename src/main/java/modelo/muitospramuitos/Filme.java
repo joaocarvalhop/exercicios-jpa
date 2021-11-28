@@ -25,6 +25,8 @@ public class Filme {
 
 	private Double nota;
 
+	// operação em cascata significa que quando for persistido um ator
+	// automáticamente vai ser inserido um filme também
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(name = "atores_filmes", joinColumns = @JoinColumn(name = "filme_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "ator_id", referencedColumnName = "id"))
 	private List<Ator> atores;

@@ -21,6 +21,8 @@ public class Ator {
 
 	private String nome;
 
+	// operação em cascata significa que quando for persistido um filme
+	// automáticamente vai ser inserido um ator também
 	@ManyToMany(mappedBy = "atores", cascade = CascadeType.PERSIST)
 	private List<Filme> filmes = new ArrayList<>();
 
