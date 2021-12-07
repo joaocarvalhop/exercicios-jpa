@@ -17,7 +17,7 @@
 		<class>modelo.muitospramuitos.Tio</class>
 		<class>modelo.muitospramuitos.Sobrinho</class>
 		<class>modelo.muitospramuitos.Ator</class>
-		<class>modelo.muitospramuitos.Filme</class>
+		<class>modelo.muitospramuitos.NotaFilme</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver"

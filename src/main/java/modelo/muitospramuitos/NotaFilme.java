@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "filmes")
-public class Filme {
+public class NotaFilme {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,11 +31,11 @@ public class Filme {
 	@JoinTable(name = "atores_filmes", joinColumns = @JoinColumn(name = "filme_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "ator_id", referencedColumnName = "id"))
 	private List<Ator> atores;
 
-	public Filme() {
+	public NotaFilme() {
 
 	}
 
-	public Filme(String nome, Double nota) {
+	public NotaFilme(String nome, Double nota) {
 		super();
 		this.nome = nome;
 		this.nota = nota;
